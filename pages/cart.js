@@ -69,6 +69,14 @@ export default function CartSreen() {
                   {cartltems.reduce((a, c) => a + c.quantity * c.price, 0)}
                 </div>
               </li>
+              <li>
+                <button
+                  onClick={() => router.push('/shipping')}
+                  className="primary-button w-full"
+                >
+                  Check Out
+                </button>
+              </li>
             </ul>
           </div>
         </div>
