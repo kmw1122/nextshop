@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import router, { useRouter } from 'next/router'
-import React, { useContext } from 'react'
+import { useRouter } from 'next/router'
+import { useContext } from 'react'
 import Layout from '../../components/Layout'
 import data from '../../utils/data'
 import { Store } from '../../utils/Store'
@@ -10,6 +10,7 @@ export default function ProductScreen() {
   const { state, dispatch } = useContext(Store)
   const { query } = useRouter()
   const { slug } = query
+  const router = useRouter()
   const product = data.products.find((x) => x.slug === slug)
   const addToCartHandler = () => {
     const existItem = state.cart.cartItems.find((x) => x.slug === product.slug)
@@ -28,6 +29,9 @@ export default function ProductScreen() {
 
   return (
     <Layout title={product.name}>
+      <button className="primary-button w-full" onClick={addToCartHandler}>
+        Add to cart
+      </button>
       <div className="py-2">
         <Link href="/">Back to products</Link>
       </div>
