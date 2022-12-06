@@ -46,3 +46,11 @@ select,
 textarea {
   @apply rounded border p-2 outline-none ring-indigo-300 focus:ring bg-slate-100;
 }
+
+.button-link {
+  @apply bg-yellow-400 hover:bg-yellow-500   p-2 m-2 rounded-md mb-4 text-center;
+}
+
+.button-link {
+  @apply bg-yellow-400 hover:bg-yellow-500 p-2 m-2 rounded-md mb-4 text-center;
+}

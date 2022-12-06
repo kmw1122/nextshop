@@ -31,6 +31,13 @@ export default function LoginScreen() {
         email,
         password,
       })
+      console.log('Login: ' + result.status)
+      await axios
+        .post('/api/auth/loginLog', { provider: 'credentials' })
+        .then((res) => {
+          console.log(res.data.message)
+        })
+
       if (result.error) {
         toast.error(result.error)
       }
@@ -82,6 +89,12 @@ export default function LoginScreen() {
       const result = await signIn('naver', {
         redirect: false,
       })
+      console.log('Login: ' + result.status)
+      await axios
+        .post('/api/auth/loginLog', { provider: 'github' })
+        .then((res) => {
+          console.log(res.data.message)
+        })
     } catch (err) {
       toast.error(getError(err))
     }
