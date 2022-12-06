@@ -9,11 +9,11 @@ export default function Crypto() {
       </h1>
 
       <div className="mx-auto max-w-screen-sm">
-        {/* <div className="button-link">
+        <div className="button-link">
           <Link href="crypto/hash">
             <a className=" text-xl">Hash function - 해시함수 </a>
           </Link>
-        </div> */}
+        </div>
 
         <div className="button-link">
           <Link href="crypto/hmac">
@@ -55,17 +55,17 @@ export default function Crypto() {
           </Link>
         </div>
 
-        {/* <div className="button-link">
+        <div className="button-link">
           <Link href="crypto/jwt">
             <a className=" text-xl">JSON Web Token (JWT) </a>
           </Link>
-        </div> */}
+        </div>
 
-        {/* <div className="button-link">
+        <div className="button-link">
           <Link href="crypto/cert">
             <a className=" text-xl">Certificate - 인증서 </a>
           </Link>
-        </div> */}
+        </div>
       </div>
     </Layout>
   )
