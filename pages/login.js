@@ -6,6 +6,7 @@ import { getError } from '../utils/error'
 import { toast } from 'react-toastify'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import axios from 'axios'
 
 export default function LoginScreen() {
   const { data: session } = useSession()

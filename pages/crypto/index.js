@@ -9,11 +9,11 @@ export default function Crypto() {
       </h1>
 
       <div className="mx-auto max-w-screen-sm">
-        <div className="button-link">
+        {/* <div className="button-link">
           <Link href="crypto/hash">
             <a className=" text-xl">Hash function - 해시함수 </a>
           </Link>
-        </div>
+        </div> */}
 
         <div className="button-link">
           <Link href="crypto/hmac">
